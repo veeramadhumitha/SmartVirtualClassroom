@@ -1,0 +1,6 @@
+test case :cbaebabacd    abc 
+output: 0 6
+
+
+abab   ba  0 1 2
+hello ll 2

@@ -1,0 +1,34 @@
+1. What is Java?
+A. Programming Language
+B. Database
+C. Browser
+D. Operating System
+Answer: A
+
+2. Which company developed React?
+A. Google
+B. Microsoft
+C. Facebook
+D. Amazon
+Answer: C
+
+3. What does HTML stand for?
+A. Hyper Trainer Marking Language
+B. Hyper Text Markup Language
+C. High Text Machine Language
+D. Hyper Tool Multi Language
+Answer: B
+
+4. Which hook is used for side effects in React?
+A. useState
+B. useRef
+C. useMemo
+D. useEffect
+Answer: D
+
+5. Which database is commonly used with MERN stack?
+A. MySQL
+B. PostgreSQL
+C. MongoDB
+D. Oracle
+Answer: C
