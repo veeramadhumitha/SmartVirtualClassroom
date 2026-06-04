@@ -1,0 +1,273 @@
+/* ================================
+   🌌 MIDNIGHT AURORA DASHBOARD
+   (GRID UNCHANGED – COLORS REPLACED)
+================================ */
+
+:root {
+  --primary-light: #e6f4ff;
+  --primary-main: #4f9cff;
+  --primary-dark: #1e3a8a;
+
+  --accent-teal: #2dd4bf;
+  --accent-indigo: #6366f1;
+
+  --white: #ffffff;
+  --gray-light: #f1f5f9;
+  --gray-text: #475569;
+
+  --shadow: rgba(15, 23, 42, 0.12);
+}
+
+/* GLOBAL */
+.teacher-dashboard {
+  padding: 2rem 4rem;
+  background: linear-gradient(
+    135deg,
+    var(--primary-light) 0%,
+    #e0ecff 50%,
+    #f0f9ff 100%
+  );
+  min-height: 100vh;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* ================================
+   HEADER
+================================ */
+
+.dash-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--white);
+  padding: 1.5rem 2rem;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px var(--shadow);
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.dash-header h1 {
+  color: var(--primary-dark);
+  font-size: 2rem;
+  margin-bottom: 0.25rem;
+}
+
+.dash-header p {
+  color: var(--gray-text);
+  font-weight: 500;
+}
+
+.primary-btn {
+  background: linear-gradient(
+    135deg,
+    var(--primary-main),
+    var(--accent-indigo)
+  );
+  color: var(--white);
+  padding: 0.8rem 1.6rem;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 6px 16px rgba(79, 156, 255, 0.45);
+  transition: all 0.3s ease;
+}
+
+.primary-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 26px rgba(79, 156, 255, 0.6);
+}
+
+/* ================================
+   STATS GRID (UNCHANGED GRID)
+================================ */
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.stat-card {
+  background: var(--white);
+  padding: 1.5rem;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 4px 14px var(--shadow);
+  animation: slideUp 0.6s ease-in-out;
+}
+
+.stat-card h2 {
+  color: var(--primary-dark);
+  font-size: 2.5rem;
+  margin-bottom: 0.4rem;
+}
+
+.stat-card span {
+  color: var(--gray-text);
+  font-weight: 500;
+}
+
+.stat-card.live {
+  background: linear-gradient(
+    135deg,
+    var(--primary-main),
+    var(--accent-teal)
+  );
+  color: var(--white);
+  box-shadow: 0 6px 20px rgba(45, 212, 191, 0.4);
+}
+
+.stat-card.live h2,
+.stat-card.live span {
+  color: var(--white);
+}
+
+/* ================================
+   CLASS GRID (UNCHANGED GRID)
+================================ */
+
+.class-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 1rem;
+  animation: fadeInUp 0.8s ease-in-out;
+}
+
+.class-card {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 6px 18px var(--shadow);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.class-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 14px 36px rgba(79, 156, 255, 0.35);
+}
+
+.class-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.8rem;
+}
+
+.class-header h3 {
+  color: var(--primary-dark);
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.class-header .live-badge {
+  background: linear-gradient(
+    135deg,
+    var(--accent-teal),
+    var(--primary-main)
+  );
+  color: var(--white);
+  font-size: 0.75rem;
+  padding: 0.25rem 0.7rem;
+  border-radius: 999px;
+  font-weight: 700;
+  animation: pulse 1.5s infinite;
+}
+
+.class-card p {
+  color: var(--gray-text);
+  margin: 0.3rem 0;
+}
+
+/* ================================
+   EMPTY STATE
+================================ */
+
+.empty-state {
+  text-align: center;
+  font-size: 1.2rem;
+  color: var(--gray-text);
+  padding: 3rem;
+  background: var(--white);
+  border-radius: 18px;
+  box-shadow: 0 6px 22px var(--shadow);
+}
+
+/* ================================
+   ANIMATIONS (UNCHANGED)
+================================ */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(45, 212, 191, 0.4);
+  }
+  70% {
+    transform: scale(1.06);
+    box-shadow: 0 0 14px 6px rgba(45, 212, 191, 0.25);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(45, 212, 191, 0);
+  }
+}
+
+/* ================================
+   RESPONSIVE (UNCHANGED)
+================================ */
+
+@media (max-width: 768px) {
+  .teacher-dashboard {
+    padding: 1.5rem;
+  }
+
+  .dash-header {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .class-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,136 @@
+/* =====================================
+   TEACHER TESTS – CLEAN MODERN UI
+===================================== */
+
+:root {
+  --bg-main: #f5f8ff;
+  --card-bg: #ffffff;
+
+  --primary: #2563eb;
+  --success: #16a34a;
+  --warning: #f59e0b;
+
+  --text-main: #020617;
+  --text-muted: #475569;
+
+  --border: #e5edff;
+  --shadow: 0 14px 35px rgba(2, 6, 23, 0.12);
+  --shadow-hover: 0 22px 45px rgba(37, 99, 235, 0.25);
+}
+
+/* ================= PAGE ================= */
+
+body {
+  background: linear-gradient(180deg, #f8faff, var(--bg-main));
+}
+
+div > h2 {
+  font-size: 30px;
+  font-weight: 800;
+  color: var(--text-main);
+  margin-bottom: 25px;
+}
+
+/* Empty text */
+div > p {
+  font-size: 16px;
+  color: var(--text-muted);
+}
+
+/* ================= TEST CARD ================= */
+
+div[key] {
+  background: var(--card-bg) !important;
+  border-radius: 18px !important;
+  padding: 22px 26px !important;
+  margin-bottom: 18px !important;
+
+  border: 1px solid var(--border) !important;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+  animation: cardFade 0.4s ease both;
+}
+
+div[key]:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+
+/* Title */
+div[key] h4 {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 8px;
+}
+
+/* Status text */
+div[key] p {
+  font-size: 15px;
+  color: var(--text-muted);
+}
+
+/* Status colors override inline */
+div[key] b {
+  padding: 6px 14px;
+  border-radius: 14px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* Draft */
+div[key] b[style*="orange"] {
+  background: #fff7ed;
+  color: var(--warning) !important;
+}
+
+/* Published */
+div[key] b[style*="green"] {
+  background: #dcfce7;
+  color: var(--success) !important;
+}
+
+/* ================= BUTTON ================= */
+
+button {
+  margin-top: 10px;
+  padding: 10px 18px;
+  border-radius: 12px;
+  border: none;
+
+  background: linear-gradient(135deg, var(--primary), #1e40af);
+  color: white;
+
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+
+  box-shadow: 0 12px 26px rgba(37, 99, 235, 0.35);
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 38px rgba(37, 99, 235, 0.45);
+}
+
+/* ================= ANIMATION ================= */
+
+@keyframes cardFade {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 600px) {
+  div > h2 {
+    font-size: 26px;
+  }
+}

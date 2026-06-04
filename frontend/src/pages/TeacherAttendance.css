@@ -1,0 +1,185 @@
+/* =====================================
+   TEACHER ATTENDANCE – PREMIUM UI
+===================================== */
+
+:root {
+  --bg-main: #f5f8ff;
+  --card-bg: #ffffff;
+
+  --primary: #2563eb;
+  --success: #16a34a;
+  --danger: #dc2626;
+
+  --text-main: #020617;
+  --text-muted: #475569;
+
+  --border: #e5edff;
+  --shadow: 0 14px 35px rgba(2, 6, 23, 0.12);
+}
+
+/* ================= PAGE ================= */
+
+.container {
+  max-width: 1100px;
+  background: linear-gradient(180deg, #f8faff, var(--bg-main));
+  padding: 40px 40px 80px;
+  border-radius: 20px;
+  animation: fadeIn 0.5s ease;
+}
+
+/* Title */
+.container h3 {
+  font-size: 30px;
+  font-weight: 800;
+  color: var(--text-main);
+  margin-bottom: 24px;
+}
+
+/* ================= PDF UPLOAD ================= */
+
+.form-label {
+  font-size: 15px;
+  color: var(--text-main);
+}
+
+.form-control {
+  border-radius: 12px;
+  border: 1.5px solid var(--border);
+  padding: 12px 14px;
+  font-size: 15px;
+  background: #f8faff;
+  transition: all 0.25s ease;
+}
+
+.form-control:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+  background: #ffffff;
+}
+
+.text-muted {
+  font-size: 13px;
+}
+
+/* ================= FILTER ROW ================= */
+
+.row {
+  background: var(--card-bg);
+  padding: 18px;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+/* ================= BUTTONS ================= */
+
+.btn {
+  border-radius: 12px;
+  font-weight: 700;
+  padding: 10px 16px;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary), #1e40af);
+  border: none;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(37, 99, 235, 0.35);
+}
+
+.btn-success {
+  background: linear-gradient(135deg, #22c55e, var(--success));
+  border: none;
+  margin-top: 20px;
+}
+
+.btn-success:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 34px rgba(22, 163, 74, 0.35);
+}
+
+/* ================= TABLE ================= */
+
+.table {
+  margin-top: 30px;
+  background: var(--card-bg);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.table thead {
+  background: linear-gradient(135deg, var(--primary), #1e40af);
+}
+
+.table thead th {
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 14px;
+  text-align: center;
+}
+
+.table tbody td {
+  padding: 14px;
+  font-size: 15px;
+  color: var(--text-main);
+  vertical-align: middle;
+}
+
+.table tbody tr:hover {
+  background: #f1f5ff;
+}
+
+/* ================= RADIO BUTTONS ================= */
+
+input[type="radio"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--primary);
+  cursor: pointer;
+}
+
+/* Absent radio in red */
+input[type="radio"]:checked[value="Absent"] {
+  accent-color: var(--danger);
+}
+
+/* ================= EMPTY STATE ================= */
+
+.table tbody tr td[colspan] {
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* ================= ANIMATION ================= */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+  .container {
+    padding: 24px 18px 70px;
+  }
+
+  .container h3 {
+    font-size: 24px;
+  }
+
+  .row {
+    gap: 12px;
+  }
+}

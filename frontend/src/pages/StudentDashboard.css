@@ -1,0 +1,60 @@
+.student-dashboard {
+  padding: 2rem 4rem;
+  background: linear-gradient(135deg, #e6f4ff, #f0f9ff);
+  min-height: 100vh;
+}
+
+/* HEADER */
+.dash-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 1.5rem 2rem;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+.dash-header h1 {
+  font-size: 2rem;
+  color: #1e3a8a;
+}
+
+.primary-btn {
+  background: linear-gradient(135deg, #4f9cff, #6366f1);
+  color: white;
+  padding: 0.8rem 1.6rem;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* BENTO GRID */
+.student-bento-grid {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.bento-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+}
+
+.bento-card h4 {
+  color: #475569;
+}
+
+.bento-card span {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+/* COLORS */
+.purple { border-left: 6px solid #8b5cf6; }
+.blue { border-left: 6px solid #3b82f6; }
+.green { border-left: 6px solid #22c55e; }
+.cyan { border-left: 6px solid #06b6d4; }

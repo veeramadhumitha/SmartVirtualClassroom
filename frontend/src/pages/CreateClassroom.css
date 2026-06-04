@@ -1,0 +1,156 @@
+/* =====================================
+   CREATE CLASSROOM – MODERN FLOW UI
+===================================== */
+
+:root {
+  --bg1: #f5f8ff;
+  --bg2: #eef2ff;
+
+  --card: #ffffff;
+
+  --primary: #2563eb;
+  --primary-dark: #1e40af;
+
+  --text-main: #020617;
+  --text-muted: #475569;
+
+  --border: #dbeafe;
+  --shadow: 0 30px 70px rgba(2, 6, 23, 0.12);
+}
+
+/* Page */
+.create-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--bg1), var(--bg2));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 30px;
+}
+
+/* Wrapper */
+.create-wrapper {
+  width: 100%;
+  max-width: 1000px;
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 80px;
+  align-items: center;
+
+  animation: pageEnter 0.8s ease;
+}
+
+/* Left info */
+.create-info h2 {
+  font-size: 40px;
+  font-weight: 800;
+  color: var(--text-main);
+  margin-bottom: 16px;
+}
+
+.create-info p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--text-muted);
+  max-width: 420px;
+}
+
+/* Card */
+.create-card {
+  background: var(--card);
+  padding: 36px 40px 42px;
+  border-radius: 24px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+
+  display: flex;
+  flex-direction: column;
+
+  animation: cardSlide 0.7s ease;
+}
+
+/* Inputs */
+.create-card input {
+  width: 100%;
+  padding: 14px 16px;
+  font-size: 16px;
+  margin-bottom: 18px;
+
+  border-radius: 12px;
+  border: 1.5px solid var(--border);
+  outline: none;
+
+  background: #f8faff;
+  color: var(--text-main);
+
+  transition: all 0.25s ease;
+}
+
+.create-card input::placeholder {
+  color: #94a3b8;
+}
+
+.create-card input:focus {
+  background: #ffffff;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+/* Button */
+.create-card button {
+  margin-top: 10px;
+  padding: 15px;
+  border-radius: 14px;
+  border: none;
+
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: white;
+
+  font-size: 17px;
+  font-weight: 700;
+  cursor: pointer;
+
+  box-shadow: 0 20px 40px rgba(37, 99, 235, 0.35);
+  transition: all 0.3s ease;
+}
+
+.create-card button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 28px 60px rgba(37, 99, 235, 0.45);
+}
+
+/* Animations */
+@keyframes pageEnter {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes cardSlide {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .create-wrapper {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .create-info p {
+    margin: auto;
+  }
+}

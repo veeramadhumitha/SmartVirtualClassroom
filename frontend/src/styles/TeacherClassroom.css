@@ -1,0 +1,214 @@
+/* =====================================
+   TEACHER CLASSROOM – CLEAN & BRIGHT UI
+===================================== */
+
+:root {
+  --bg-main: #0bcfcf;
+
+  --card-bg: #39a6ee;
+  --primary: #37abe9;
+  --primary-soft: #0f73f6;
+
+  --text-main: #020617;
+  --text-muted: #475569;
+
+  --danger: #3d15db;
+  --warning: #0fd59a;
+  --success: #16a34a;
+
+  --border: #e5edff;
+  --shadow: 0 12px 28px rgba(2, 6, 23, 0.12);
+  --shadow-hover: 0 20px 45px rgba(37, 99, 235, 0.25);
+}
+
+/* ================= PAGE ================= */
+
+.classroom-options {
+  padding: 40px;
+  text-align: center;
+  background: linear-gradient(180deg, #f8faff, var(--bg-main));
+  min-height: 100vh;
+}
+
+/* Title */
+.classroom-options h1 {
+  font-size: 34px;
+  margin-bottom: 8px;
+  font-weight: 800;
+  color: var(--text-main);
+}
+
+.classroom-options > p {
+  color: var(--text-muted);
+  margin-bottom: 30px;
+  font-size: 16px;
+}
+
+/* ================= OPTIONS GRID ================= */
+
+.options-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* ================= OPTION CARD ================= */
+
+.option-card {
+  background: var(--card-bg);
+  padding: 36px 22px;
+  border-radius: 16px;
+  cursor: pointer;
+
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+
+  transition: all 0.3s ease;
+  animation: cardFade 0.5s ease both;
+}
+
+.option-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-hover);
+}
+
+/* Icon */
+.option-icon {
+  width: 56px;
+  height: 56px;
+  margin: auto;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 26px;
+  background: var(--primary-soft);
+  color: var(--primary);
+}
+
+/* Card text */
+.option-card h3 {
+  margin-top: 16px;
+  margin-bottom: 8px;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.option-card p {
+  font-size: 15px;
+  color: var(--text-muted);
+}
+
+/* ================= LIVE STATES ================= */
+
+.option-card.live {
+  background: #fff1f2;
+  border: 2px solid var(--danger);
+}
+
+.option-card.live .option-icon {
+  background: #fee2e2;
+  color: var(--danger);
+}
+
+.option-card.live h3 {
+  color: var(--danger);
+}
+
+.option-card.end-live {
+  background: #fffbeb;
+  border: 2px solid var(--warning);
+}
+
+.option-card.end-live .option-icon {
+  background: #fef3c7;
+  color: var(--warning);
+}
+
+.option-card.end-live h3 {
+  color: var(--warning);
+}
+
+/* ================= SECTION HEADERS ================= */
+
+.classroom-options h2 {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+/* ================= TABLE ================= */
+
+table {
+  width: 100%;
+  margin-top: 16px;
+  border-collapse: collapse;
+  background: var(--card-bg);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+thead {
+  background: linear-gradient(135deg, var(--primary), #1e40af);
+}
+
+thead th {
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 14px;
+  text-align: left;
+}
+
+tbody td {
+  padding: 14px;
+  font-size: 15px;
+  color: var(--text-main);
+  border-bottom: 1px solid var(--border);
+}
+
+tbody tr:hover {
+  background: #f1f5ff;
+}
+
+tbody td:last-child {
+  font-weight: 700;
+  color: var(--primary);
+}
+
+/* ================= ANIMATION ================= */
+
+@keyframes cardFade {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+  .classroom-options {
+    padding: 30px 20px;
+  }
+
+  .classroom-options h1 {
+    font-size: 28px;
+  }
+
+  .options-grid {
+    grid-template-columns: 1fr;
+  }
+}
